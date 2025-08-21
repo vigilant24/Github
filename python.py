@@ -1,5 +1,16 @@
+rtgudfjklhgtrjfecfd bfkv oijgkfdoivjlkdmfgfvobiklgfdjmcidgbgjflkdmcn vjhdfojcflkxnjehrfjkd
 
-# --- STEP 2: Find all "View" buttons ---###skdflkgjfdljkldjldjddgikdlfgkldfjdkjfkdsljkl
+# --- SETUP SELENIUM ---
+options = Options()
+options.add_argument("--disable-popup-blocking")
+driver = webdriver.Chrome(options=options)
+
+# --- STEP 1: Open the site ---
+driver.get("https://studentportal.inokomis.in/Newstudent/WeLectures")  # 🔁 Replace with actual URL
+driver.maximize_window()
+time.sleep(95)
+#hello world
+# --- STEP 2: Find all "View" buttons ---
 view_buttons = driver.find_elements(By.XPATH, "//button[text()='View']")
 
 print(f"Found {len(view_buttons)} videos.")
